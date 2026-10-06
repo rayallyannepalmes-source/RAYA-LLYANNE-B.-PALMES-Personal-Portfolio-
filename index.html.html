@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Raya Llyanne Bernabe Palmes — BSIS Student</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+<style>
+  html{scroll-behavior:smooth;}
+  body{
+    background:#0e0e0e;
+    color:#f2f2f2;
+    overflow-x:hidden;
+    font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+  }
+  section{padding:5rem 0;}
+  h1,h2,h3{font-weight:700;}
+  .section-heading{font-size:1.75rem;margin-bottom:.35rem;}
+  .section-sub{color:#9a9a9a;margin-bottom:2rem;}
+
+  /* Hero */
+  #about{
+    background:#0e0e0e;
+    border-bottom:1px solid rgba(255,255,255,.12);
+    padding-top:7rem;
+  }
+  .hero-name{
+    color:#fff;
+  }
+  .avatar-ring{
+    width:180px;height:180px;border-radius:50%;
+    padding:5px;
+    background:#4d4d4d;
+    display:flex;align-items:center;justify-content:center;
+    margin:0 auto;
+  }
+  .avatar-ring img{
+    width:100%;height:100%;border-radius:50%;
+    object-fit:cover;
+    border:4px solid #0e0e0e;
+    display:block;
+  }
+  .who-label{color:#c9c9c9;font-weight:600;letter-spacing:.03em;text-transform:uppercase;font-size:.85rem;}
+  .btn-mono{
+    background:#fff;
+    border:1px solid #fff;
+    color:#0e0e0e;
+    font-weight:600;
+  }
+  .btn-mono:hover{background:#d4d4d4;border-color:#d4d4d4;color:#0e0e0e;}
+  .btn-outline-light-custom{
+    border:1px solid rgba(255,255,255,.12);
+    color:#f2f2f2;
+    background:transparent;
+    font-weight:600;
+  }
+  .btn-outline-light-custom:hover{
+    border-color:#fff;
+    color:#fff;
+  }
+
+  /* Skills */
+  #skills{
+    background:#161616;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .badge-skill{
+    font-weight:600;
+    font-size:.85rem;
+    padding:.55em 1em;
+    border-radius:50rem;
+  }
+  .badge-dark{background:#2a2a2a;color:#f2f2f2;border:1px solid rgba(255,255,255,.12);}
+  .badge-mid{background:#5a5a5a;color:#fff;}
+  .badge-light{background:#e8e8e8;color:#111;}
+
+  /* Projects/Accomplishments */
+  #projects{
+    background:#0e0e0e;
+    border-bottom:1px solid rgba(255,255,255,.12);
+  }
+  .project-card{
+    background:#1c1c1c;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;
+    overflow:hidden;
+    height:100%;
+    display:flex;
+    flex-direction:column;
+    transition:border-color .2s;
+  }
+  .project-card:hover{border-color:#5a5a5a;}
+  .project-thumb{
+    height:140px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:
+      repeating-linear-gradient(0deg, rgba(255,255,255,.05) 0 1px, transparent 1px 30px),
+      repeating-linear-gradient(90deg, rgba(255,255,255,.05) 0 1px, transparent 1px 30px),
+      linear-gradient(135deg, #2b2b2b, #1a1a1a 60%, #0d0d0d);
+    border-bottom:1px solid rgba(255,255,255,.12);
+    color:#fff;
+  }
+  .project-body{
+    padding:1.5rem;
+    flex:1;
+    display:flex;
+    flex-direction:column;
+  }
+  .project-body h3{font-size:1.1rem;margin-bottom:.5rem;}
+  .project-body p{color:#9a9a9a;font-size:.9rem;flex:1;}
+
+  /* Contact */
+  #contact{
+    background:#161616;
+  }
+  .form-control-dark{
+    background:#1c1c1c;
+    border:1px solid rgba(255,255,255,.12);
+    color:#f2f2f2;
+  }
+  .form-control-dark:focus{
+    background:#1c1c1c;
+    color:#fff;
+    border-color:#fff;
+    box-shadow:0 0 0 .2rem rgba(255,255,255,.15);
+  }
+  .form-label{color:#9a9a9a;font-size:.85rem;}
+  .contact-card{
+    background:#1c1c1c;
+    border:1px solid rgba(255,255,255,.12);
+    border-radius:12px;
+    padding:2rem;
+    height:100%;
+  }
+
+  /* Footer */
+  footer{
+    background:#000;
+    border-top:1px solid rgba(255,255,255,.12);
+    padding:2rem 0;
+  }
+  footer p{color:#9a9a9a;margin-bottom:.75rem;}
+  .footer-icons a{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    width:38px;height:38px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,.12);
+    color:#f2f2f2;
+    margin:0 .35rem;
+    text-decoration:none;
+    transition:.2s;
+  }
+  .footer-icons a:hover{
+    background:#fff;
+    border-color:#fff;
+    color:#0e0e0e;
+  }
+</style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+  <div class="container">
+    <a class="navbar-brand" href="#about">Raya Llyanne Bernabe Palmes</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse justify-content-end" id="navMenu">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+        <li class="nav-item"><a class="nav-link" href="#projects">Projects/Accomplishments</a></li>
+        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- About / Hero -->
+<section id="about">
+  <div class="container">
+    <h1 class="mb-5">Hi, I'm <span class="hero-name">Raya Llyanne Bernabe Palmes</span> 👋</h1>
+    <div class="row align-items-center g-5">
+      <div class="col-md-3 text-center">
+        <div class="avatar-ring">
+          <img src="./9e67ec5d-c6f0-4874-a3cc-45a3fc42552d.jpg" alt="Raya Llyanne Bernabe Palmes"></img>
+        </div>
+      </div>
+      <div class="col-md-9">
+        <p class="who-label mb-2">Who I Am</p>
+        <p class="mb-4" style="max-width:60ch;">
+        Motivated Bachelor of Science in Information Systems student balancing academics, sideline work, and active church service. Experienced in photography, videography, content creation, media production, and event support. Eager to apply and further develop my technical, creative, and professional skills.        </p>
+        <a href="#contact" class="btn btn-mono me-2 px-4">Get in touch</a>
+        <a href="#projects" class="btn btn-outline-light-custom px-4">See my work</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <div class="container">
+    <h2 class="section-heading">My Core Skills</h2>
+    <p class="section-sub">What I Work With Most</p>
+    <div class="d-flex flex-wrap gap-2">
+      <span class="badge badge-skill badge-mid">Canva and Graphic Design</span>
+      <span class="badge badge-skill badge-mid">Photo and Video Editing</span>
+      <span class="badge badge-skill badge-mid">Content Creation</span>
+      <span class="badge badge-skill badge-mid">Social Media Management</span>
+    </div>
+  </div>
+</section>
+
+<!-- Projects / Accomplishments -->
+<section id="projects">
+  <div class="container">
+    <h2 class="section-heading">Projects/Accomplishments</h2>
+    <p class="section-sub">My Featured Work</p>
+
+    <div class="row g-4">
+      <div class="col-md-4">
+        <div class="project-card">
+          <div class="project-thumb">
+            <svg xmlns="http://www.w3.org/2000/svg" 
+             width="40" 
+             height="40" 
+             fill="currentColor" 
+             viewBox="0 0 16 16">
+          <path d="M15 3a1 1 0 0 0-1-1h-3.5l-1-1h-3l-1 1H2a1 1 0 0 0-1 1v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V3zM2 3h3.5l1-1h3l1 1H14v10H2V3z"/>
+          <path d="M8 5a3 3 0 1 0 0 6 3 3 0 0 0 0-6zm0 1a2 2 0 1 1 0 4 2 2 0 0 1 0-4z"/>
+          <circle cx="12.5" cy="3.5" r=".75"/>
+        </svg>
+      </div>
+          <div class="project-body">
+            <h3>YouTube Vlog Edits</h3>
+            <p>I am a paid video and thumbnail editor for a growing YouTube channel, responsible for weekly video edits and Reels while continuing my studies.
+</p>
+          <a href="https://www.youtube.com/@davidfaithchannel" class="btn btn-mono btn-sm align-self-start">View Project</a> 
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <div class="project-thumb">
+      <svg xmlns="http://www.w3.org/2000/svg"
+           width="40"
+           height="40"
+           fill="currentColor"
+           viewBox="0 0 16 16">
+        <path d="M12.854.146a.5.5 0 0 0-.708 0L11.5.793l3.707 3.707.646-.646a.5.5 0 0 0 0-.708l-3-3z"/>
+        <path d="M10.5 2.5 1 12v3h3L13.5 5.5l-3-3zM2 12.5l8.5-8.5 1.5 1.5L3.5 14H2v-1.5z"/>
+      </svg>
+          </div>
+          <div class="project-body">
+            <h3>NetBeans Final Project</h3>
+            <p>My first-year final project was one of the moments that made me realize how much I had learned about programming and coding. It gave me the opportunity to apply what I had learned, strengthen my problem-solving skills, and gain a better understanding of how coding works in real projects.</p>
+            <a href="https://drive.google.com/drive/folders/1uoj2ut6cXVoBi2tYw5yW6FCJNEmrQdVZ?usp=drive_link" class="btn btn-mono btn-sm align-self-start">View Project</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="col-md-4">
+        <div class="project-card">
+          <div class="project-thumb">
+     <svg xmlns="http://www.w3.org/2000/svg"
+           width="40"
+           height="40"
+           fill="currentColor"
+           viewBox="0 0 16 16">
+        <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V4z"/>
+        <path d="M6.5 5.5v5l4-2.5-4-2.5z" fill="white"/>
+      </svg>
+          </div>
+          <div class="project-body">
+            <h3>Media Production & Graphic Design</h3>
+            <p>Experienced in social media photography, videography, Reels, posters, and event graphic design for Elevate Feliz, CCF Feliz. Also skilled in live event production, including graphics operation and on-screen visual presentation.</p>
+            <a href="https://drive.google.com/drive/folders/1dcO-njiDb8uszixuIsZx-Cq7T7pgZNv1?usp=drive_link" class="btn btn-mono btn-sm align-self-start">View Project</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Contact -->
+<section id="contact">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-md-7">
+        <h2 class="section-heading">Let's Talk</h2>
+        <p class="section-sub">Got a question or a project in mind? Drop me a line.</p>
+        <form id="contactForm" novalidate>
+          <div class="mb-3">
+            <label class="form-label" for="name">Name</label>
+            <input type="text" class="form-control form-control-dark" id="name" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="email">Email</label>
+            <input type="email" class="form-control form-control-dark" id="email" required>
+          </div>
+          <div class="mb-3">
+            <label class="form-label" for="message">Message</label>
+            <textarea class="form-control form-control-dark" id="message" rows="4" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-mono px-4">Send Message</button>
+          <div id="formNotice" class="mt-3 text-success small" style="display:none;">
+            Thanks — message noted (demo form).
+          </div>
+        </form>
+      </div>
+      <div class="col-md-5">
+        <div class="contact-card">
+          <h3 class="h5 mb-2">Let's Connect</h3>
+          <p class="section-sub mb-4">Facebook's the quickest way to reach me:</p>
+          <a href="https://www.facebook.com/Raya.Llyanne0345" class="btn btn-mono">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-linkedin me-1" viewBox="0 0 16 16">
+              <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+            </svg>
+            Facebook Profile
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Footer -->
+<footer>
+  <div class="container text-center">
+    <div class="footer-icons mb-3">
+      <a href="#" aria-label="LinkedIn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 15.487 0 14.854zm4.943 12.248V6.169H2.542v7.225zm-1.2-8.212c.837 0 1.358-.554 1.358-1.248-.015-.709-.52-1.248-1.342-1.248S2.4 3.226 2.4 3.934c0 .694.521 1.248 1.327 1.248zm4.908 8.212V9.359c0-.216.016-.432.08-.586.173-.431.568-.878 1.232-.878.869 0 1.216.662 1.216 1.634v3.865h2.401V9.25c0-2.22-1.184-3.252-2.764-3.252-1.274 0-1.845.7-2.165 1.193v.025h-.016l.016-.025V6.169h-2.4c.03.678 0 7.225 0 7.225z"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="Email">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M0 4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm2-1a1 1 0 0 0-1 1v.217l7 4.2 7-4.2V4a1 1 0 0 0-1-1zm13 2.383-4.708 2.825L15 11.105zm-.034 6.876-5.64-3.471L8 9.583l-1.326-.795-5.64 3.47A1 1 0 0 0 2 13h12a1 1 0 0 0 .966-.741M1 11.105l4.708-2.897L1 5.383z"/>
+        </svg>
+      </a>
+      <a href="#" aria-label="GitHub">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+          <path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.01 8.01 0 0 0 16 8c0-4.42-3.58-8-8-8"/>
+        </svg>
+      </a>
+    </div>
+    <p class="mb-0 small">&copy; 2026 Raya Llyanne Bernabe Palmes. All rights reserved.</p>
+  </div>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    if (!this.checkValidity()) {
+      this.reportValidity();
+      return;
+    }
+    document.getElementById('formNotice').style.display = 'block';
+    this.reset();
+  });
+</script>
+</body>
+</html>
+
